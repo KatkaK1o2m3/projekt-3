@@ -10,7 +10,6 @@
   --back-brown: #644b4f;
   --back-dark: #333333;
   --back-grey: #f2f2f278;
-  --col-red: red;
   --butt-col: #efa69d;
   --col-hover: #e9877b;
   --col-lila: #ae0ed2;
@@ -21,7 +20,7 @@ body {
   font-family: Caveat, Single day, Roboto, sans-serif;
 }
 
-.container {
+.container-menu {
   display: none;
   height: 500px;
   background-color: var(--col-white);
@@ -49,6 +48,7 @@ header {
 nav {
   display: none;
   position: absolute;
+  margin-right: 70px;
 }
 
 nav ul {
@@ -132,36 +132,20 @@ button {
 .gallery-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .gallery img {
   border-radius: 10px;
   display: block;
-  width: 80%;
-  height: 150px;
+  margin: 20px;
 }
 
-.img-zoom {
-  transform: scale(1.5);
-  transition: transform 0.3s ease;
-}
-
-.envelop {
-  margin-left: 70px;
-  position: relative;
-  display: inline-block;
-}
-
-.envelop h1 {
-  height: 150px;
-  width: 80%;
-  background-color: var(--col-white);
-  border-radius: 10px;
-  text-align: center;
-  padding: 45px 0;
+.my-img:hover {
+  transform: scale(1.1);
 }
 
 .reviews-wrapper {
@@ -204,6 +188,26 @@ button {
 .main-section {
   color: var(--back-dark);
   background-color: var(--col-lila);
+  overflow-y: scroll;
+  position: relative;
+}
+
+.arrow {
+  position: fixed;
+  display: none;
+  bottom: 50px;
+  right: 20px;
+}
+
+.arrow img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--col-white);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  text-decoration: none;
 }
 
 .main-wrapper {
@@ -238,7 +242,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--col-lila);
+  background-color: var(--back-dark);
   color: var(--col-white);
 }
 
@@ -301,9 +305,10 @@ button:hover {
 .notificationName,
 .notificationEmail,
 .notificationSubmit {
+  font-size: 20px;
   font-family: sans-serif;
   display: none;
-  color: var(--col-hover);
+  color: var(--back-brown);
   margin-top: 10px;
 }
 
@@ -321,12 +326,12 @@ button:hover {
 
 input {
   background-color: var(--col-white);
-  color: var(--col-lila);
+  color: var(--back-black);
   margin: 10px 0;
   padding: 5px 10px;
 }
 
 input:hover {
-  background-color: var(--col-hover);
-  counter-reset: var(--back-brown);
+  background-color: var(--back-brown);
+  counter-reset: var(--back-black);
 }

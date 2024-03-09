@@ -55,11 +55,11 @@
   }
   .gallery-wrapper {
     flex-direction: row;
+    justify-content: center;
     gap: 10px;
-    margin-left: 70px;
   }
 
-  .envelop {
+  .my-img {
     width: calc(80% / 3 - 20px / 3);
   }
 

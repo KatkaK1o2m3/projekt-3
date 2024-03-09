@@ -76,15 +76,20 @@ submit.addEventListener("click", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const imageContainer = document.querySelector(".envelop");
-  const image = imageContainer.querySelector("img");
+window.addEventListener("scroll", function () {
+  const scrollPos = window.scrollY;
+  const scrollButton = document.querySelector(".arrow");
+  if (scrollPos > 500) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+});
 
-  imageContainer.addEventListener("mouseenter", function () {
-    image.classList.add("img-zoom");
-  });
-
-  imageContainer.addEventListener("mouseleave", function () {
-    image.classList.remove("img-zoom");
+document.querySelector(".arrow img").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 });
